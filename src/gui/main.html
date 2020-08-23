@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eel Boilerplate</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="./js/gui.js"></script>
+    <script type="text/javascript" src="./js/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/bulma.min.css"> <!-- Bulma -->
+    <link rel="stylesheet" href="css/bulma-tooltip.css"> <!-- Bulma Tooltip -->
+    <link rel="stylesheet" href="css/fa-all.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/style.css"> <!-- mio css -->
+    <style>
+
+        /* sticky footer for Bulma */
+        .Site {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .Site-content {
+            flex: 1;
+        }
+        /* end sticky footer bulma */
+
+    </style>
+    <script>
+
+        async function test_eel_function_calling_python() {
+            let result = await eel.test_eel_function()();
+            alert("Result from Python:\n" + result)
+        }
+
+    </script>
+</head>
+<body class="Site">
+    <main class="Site-content">
+        <section class="section has-background-info-light">
+            <div class="container">
+                <h1 class="title has-text-black">
+                    Eel Boilerplate
+                </h1>
+                <p class="subtitle has-text-black">
+                    Main page opened by Eel
+                </p>
+            </div>
+        </section>
+
+        <section class="section pb-1">
+            <div class="container m-0">
+                    <div class="control">
+                        <a id="download_button" class="button is-info has-tooltip-arrow" data-tooltip="Testa il ritorno di valori da Python" onclick="test_eel_function_calling_python()">
+                        Press me to query the Python backend
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+    <footer class="footer mt-1 py-2">
+        <div class="content mt-0">
+            <p class="is-size-7 is-italic has-text-grey-light">
+                <span class="has-text-weight-semibold ">Eel Boilerplate</span> - <a href="https://github.com/linuxiamo/eel_boilerplate" target="_blank">Discover me on Github</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

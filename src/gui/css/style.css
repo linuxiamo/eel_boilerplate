@@ -1,0 +1,27 @@
+/* BULMA TABS */
+/*Downloaded from https://www.codeseek.co/zzzian/bulma-tabs-GmONay */
+#pictures {
+    width: 100%;
+    height: 20rem;
+    background-color: lightgreen;
+}
+
+#music {
+    width: 100%;
+    height: 20rem;
+    background-color: lightblue;
+}
+
+#videos {
+    width: 100%;
+    height: 20rem;
+    background-color: lightyellow;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.current-tab {
+    display: inherit;
+}
